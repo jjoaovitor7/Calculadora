@@ -27,21 +27,21 @@ label {
 }
 
 input[type="number"] {
-    font-family: 'Share Tech', sans-serif;   
+    font-family: 'Share Tech', sans-serif;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
 input[type="submit"] {
-    font-family: 'Share Tech', sans-serif;   
+    font-family: 'Share Tech', sans-serif;
     margin: 25px 0 0 0;
 }
 
 @keyframes slidein {
     from {
-        transform: scaleY(0);
+        transform: scaleX(0);
     }
     to {
-        transform: scaleY(1);
+        transform: scaleX(1);
     }
 }

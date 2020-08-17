@@ -10,7 +10,12 @@ function capture() {
         return 0;
     }
     else {
-        alert(parseInt(binary, 2));
+        binaryCalc = parseInt(binary, 2);
+        if (isNaN(binaryCalc)) {
+            alert("Só é permitido 0's ou 1's.");
+        }
+        else {
+            alert(binaryCalc);
+        }
     }
-
 }
