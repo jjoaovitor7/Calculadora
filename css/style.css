@@ -1,0 +1,45 @@
+body {
+    margin: 35vh 0 0 0;
+    background: #006400; /* Dark Green */
+}
+
+header > h1 {
+
+    border: 1px solid green;
+    margin: 25px auto 25px auto;
+    text-align: center;
+
+    font-family: 'Share Tech', sans-serif;
+    font-size: 60px;
+    font-size: 3.75rem;
+
+    width: 350px;
+
+    animation: slidein 1.5s;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form > label {
+    font-family: 'Share Tech', sans-serif;
+    margin-right: 1%;
+}
+
+form > input {
+    font-family: 'Share Tech', sans-serif;   
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+@keyframes slidein {
+    from {
+        transform: scaleY(0);
+    }
+    to {
+        transform: scaleY(1);
+    }
+}
