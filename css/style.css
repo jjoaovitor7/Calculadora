@@ -70,3 +70,19 @@ input[type="submit"] {
     }
 }
 
+footer {
+    background-color: #0c4b0c;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    padding-left: 10px;
+}
+footer p {
+    text-shadow: 4px 4px 8px #32cd32;
+    font-size: 16px;
+    color: #fff;
+    font-family: 'Lobster', cursive;
+}
