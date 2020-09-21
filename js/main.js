@@ -1,84 +1,91 @@
-const one = document.getElementById('1');
-const two = document.getElementById('2');
-const three = document.getElementById('3');
-const four = document.getElementById('4');
-const five = document.getElementById('5');
-const six = document.getElementById('6');
-const seven = document.getElementById('7');
-const eight = document.getElementById('8');
-const nine = document.getElementById('9');
-const zero = document.getElementById('0');
+const one = document.getElementById("1");
+const two = document.getElementById("2");
+const three = document.getElementById("3");
+const four = document.getElementById("4");
+const five = document.getElementById("5");
+const six = document.getElementById("6");
+const seven = document.getElementById("7");
+const eight = document.getElementById("8");
+const nine = document.getElementById("9");
+const zero = document.getElementById("0");
 
-const sum = document.getElementById('+');
-const subt = document.getElementById('-');
-const mult = document.getElementById('x');
-const div = document.getElementById('/'); 
-const equals = document.getElementById('=');
+const sum = document.getElementById("+");
+const subt = document.getElementById("-");
+const mult = document.getElementById("x");
+const div = document.getElementById("/");
+const equals = document.getElementById("=");
+const clear = document.getElementById("c");
 
 let display = document.querySelector(".display");
 
 function oneClicked() {
-    display.innerHTML += '<p>1</p>';
+  display.textContent += 1;
 }
 
 function twoClicked() {
-    display.innerHTML += '<p>2</p>';
+  display.textContent += 2;
 }
 
 function threeClicked() {
-    display.innerHTML += '<p>3</p>';
+  display.textContent += 3;
 }
 
 function fourClicked() {
-    display.innerHTML += '<p>4</p>';
+  display.textContent += 4;
 }
 
 function fiveClicked() {
-    display.innerHTML += '<p>5</p>';
+  display.textContent += 5;
 }
 
 function sixClicked() {
-    display.innerHTML += '<p>6</p>';
+  display.textContent += 6;
 }
 
 function sevenClicked() {
-    display.innerHTML += '<p>7</p>';
+  display.textContent += 7;
 }
 
 function eightClicked() {
-    display.innerHTML += '<p>8</p>';
+  display.textContent += 8;
 }
 
 function nineClicked() {
-    display.innerHTML += '<p>9</p>';
+  display.textContent += 9;
 }
 
 function zeroClicked() {
-    display.innerHTML += '<p>0</p>';
-    console.log(display.textContent);
+  display.textContent += 0;
 }
 
 function sumClicked() {
-    display.innerHTML += '<p>+</p>';
+  display.textContent += '+';
 }
 
 function subtClicked() {
-    display.innerHTML += '<p>-</p>';
+  display.textContent += '-';
 }
 
 function multClicked() {
-    display.innerHTML += '<p>*</p>';
+  display.textContent += '*';
 }
 
 function divClicked() {
-    display.innerHTML += '<p>/</p>';
+  display.textContent += '/';
 }
 
 function equalsClicked() {
-    let op = eval(display.textContent);
-    display.innerHTML = '<p>' + op + '</p>';
+  try {
+    let aux = eval(display.textContent);
+    display.textContent = aux;
+  } catch (SyntaxError) {
+    display.textContent = '';
+  }
 }
 
+function clearClicked() {
+  display.textContent = '';
+}
 
 one.addEventListener("click", oneClicked);
 two.addEventListener("click", twoClicked);
@@ -96,3 +103,4 @@ subt.addEventListener("click", subtClicked);
 mult.addEventListener("click", multClicked);
 div.addEventListener("click", divClicked);
 equals.addEventListener("click", equalsClicked);
+clear.addEventListener("click", clearClicked);

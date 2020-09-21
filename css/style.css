@@ -2,40 +2,61 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 25vh;
+    margin: 22.5vh;
 }
 
+/* Display */
 .display {
-    display: inline-block;
+    display: flex;
     width: 400px;
     height: 50px;
     background: #f2f2f2;
     border-radius: 5px;
     border: 1px solid #c2c2c2;
     margin-bottom: 5px;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .display p {
     float: right;
 }
+/***********/
 
+
+/* Container */
 .container {
     display: grid;
     grid-template-columns: 100px 100px 100px 100px;
 }
 
 .container button {
+    /* display: inline; */
+    display: inline-block;
     background: #111;
     border: none;
     color: white;
     padding: 16px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
     cursor: pointer;
 }
 
 .container button:hover {
     background: #000;
+}
+/*************/
+
+
+/* Media Queries */
+@media screen and (max-width: 768px){
+    .display{
+        width: 250px;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
 }
