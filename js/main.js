@@ -15,6 +15,7 @@ const mult = document.getElementById("x");
 const div = document.getElementById("/");
 const equals = document.getElementById("=");
 const clear = document.getElementById("c");
+const point = document.getElementById(".");
 
 let display = document.querySelector(".display");
 
@@ -59,19 +60,19 @@ function zeroClicked() {
 }
 
 function sumClicked() {
-  display.textContent += '+';
+  display.textContent += "+";
 }
 
 function subtClicked() {
-  display.textContent += '-';
+  display.textContent += "-";
 }
 
 function multClicked() {
-  display.textContent += '*';
+  display.textContent += "*";
 }
 
 function divClicked() {
-  display.textContent += '/';
+  display.textContent += "/";
 }
 
 function equalsClicked() {
@@ -79,12 +80,16 @@ function equalsClicked() {
     let aux = eval(display.textContent);
     display.textContent = aux;
   } catch (SyntaxError) {
-    display.textContent = '';
+    display.textContent = "";
   }
 }
 
 function clearClicked() {
-  display.textContent = '';
+  display.textContent = "";
+}
+
+function pointClicked() {
+  display.textContent += ".";
 }
 
 one.addEventListener("click", oneClicked);
@@ -104,3 +109,4 @@ mult.addEventListener("click", multClicked);
 div.addEventListener("click", divClicked);
 equals.addEventListener("click", equalsClicked);
 clear.addEventListener("click", clearClicked);
+point.addEventListener("click", pointClicked);
