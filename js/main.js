@@ -1,3 +1,5 @@
+// variables
+// numbers
 const one = document.getElementById("1");
 const two = document.getElementById("2");
 const three = document.getElementById("3");
@@ -9,15 +11,23 @@ const eight = document.getElementById("8");
 const nine = document.getElementById("9");
 const zero = document.getElementById("0");
 
+// operations
 const sum = document.getElementById("+");
 const subt = document.getElementById("-");
 const mult = document.getElementById("x");
 const div = document.getElementById("/");
 const equals = document.getElementById("=");
+
+// clear
 const clear = document.getElementById("c");
+
+// point, in decimal
 const point = document.getElementById(".");
 
+// display
 let display = document.querySelector(".display");
+//----------
+
 
 function oneClicked() {
   display.textContent += 1;
@@ -76,6 +86,13 @@ function divClicked() {
 }
 
 function equalsClicked() {
+
+  /**
+   * for operations, the value of display.textContent is taken
+   * and the operations in this are executed e soon after
+   * are diplayed in display, if an error occurs,
+   * values are "erased".
+   */
   try {
     let aux = eval(display.textContent);
     display.textContent = aux;
@@ -85,6 +102,9 @@ function equalsClicked() {
 }
 
 function clearClicked() {
+  /**
+   * clear the display.
+   */
   display.textContent = "";
 }
 
@@ -92,6 +112,8 @@ function pointClicked() {
   display.textContent += ".";
 }
 
+// events
+// numbers
 one.addEventListener("click", oneClicked);
 two.addEventListener("click", twoClicked);
 three.addEventListener("click", threeClicked);
@@ -103,10 +125,15 @@ eight.addEventListener("click", eightClicked);
 nine.addEventListener("click", nineClicked);
 zero.addEventListener("click", zeroClicked);
 
+// operations
 sum.addEventListener("click", sumClicked);
 subt.addEventListener("click", subtClicked);
 mult.addEventListener("click", multClicked);
 div.addEventListener("click", divClicked);
 equals.addEventListener("click", equalsClicked);
+
+// clear
 clear.addEventListener("click", clearClicked);
+
+// point, in decimal
 point.addEventListener("click", pointClicked);
