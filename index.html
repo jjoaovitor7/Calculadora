@@ -1,42 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- título da página-->
     <title>Bin2Dec</title>
 
     <!-- css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./public/css/style.css" />
 
     <!-- fontes -->
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <header>
-        <h1> Bin2Dec</h1>
-    </header>    
+      <h1>Bin2Dec</h1>
+    </header>
 
     <main>
-        <form>            
-            <div>
-                <label for="binary" id="lbinary">Binary:</label>
-                <input type="number" id="binary" name="binary">
-            </div>
+      <form>
+        <div>
+          <label for="binary" id="lbinary">Binary:</label>
+          <input type="number" id="binary" name="binary" />
+        </div>
 
-            <div>
-                <input type="submit" value="Enviar" onclick="capture()"> 
-            </div>
-        </form>
+        <div>
+          <input type="submit" value="Enviar" onclick="capture()" />
+        </div>
+      </form>
     </main>
 
     <footer>
-        <p>jjoaovitor7</p>
+      <p>jjoaovitor7</p>
     </footer>
-    <script src="js/main.js"></script>
-</body>
+    <script src="./public/scripts/main.js"></script>
+  </body>
 </html>
