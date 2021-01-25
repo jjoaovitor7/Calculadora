@@ -23,18 +23,32 @@
 
   <body>
     <header>
-      <h1>Bin2Dec</h1>
+      <label for="cbDarkMode">Dark Mode</label>
+      <label class="switch-container">
+        <input type="checkbox" id="cbDarkMode" />
+        <span class="slider"></span>
+      </label>
+
+      <h1>
+        <span id="title-header-1">Bin</span>2<span id="title-header-2"
+          >Dec</span
+        >
+      </h1>
     </header>
 
     <main>
       <form>
         <div>
           <label for="binary" id="lbinary">Binary:</label>
-          <input type="number" id="binary" name="binary" />
+          <input type="number" id="binary" />
+          <label for="decimal" id="ldecimal" hidden>Decimal:</label>
+          <input type="number" id="decimal" hidden />
         </div>
 
         <div>
-          <input type="submit" value="Enviar" onclick="capture()" />
+          <button id="btn-dec2bin">Dec2Bin</button>
+          <input type="submit" id="input-bin2dec" value="Enviar" onclick="Bin2Dec()" />
+          <input type="submit" id="input-dec2bin" value="Enviar" onclick="Dec2Bin()" hidden />
         </div>
       </form>
     </main>
