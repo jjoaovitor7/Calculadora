@@ -37,6 +37,23 @@ function toogleToDec2Bin(e) {
   document.getElementById("decimal").removeAttribute("hidden");
   document.getElementById("input-bin2dec").setAttribute("hidden", true);
   document.getElementById("input-dec2bin").removeAttribute("hidden");
+  document.getElementById("btn-bin2dec").removeAttribute("hidden");
+  document.getElementById("btn-dec2bin").setAttribute("hidden", true);
+}
+
+function toogleToBin2Dec(e) {
+  e.preventDefault();
+  document.querySelector("title").textContent = "Bin2Dec";
+  document.getElementById("title-header-1").textContent = "Bin";
+  document.getElementById("title-header-2").textContent = "Dec";
+  document.getElementById("lbinary").removeAttribute("hidden");
+  document.getElementById("binary").removeAttribute("hidden");
+  document.getElementById("ldecimal").setAttribute("hidden", true);
+  document.getElementById("decimal").setAttribute("hidden", true);
+  document.getElementById("input-bin2dec").removeAttribute("hidden");
+  document.getElementById("input-dec2bin").setAttribute("hidden", true);
+  document.getElementById("btn-bin2dec").setAttribute("hidden", true);
+  document.getElementById("btn-dec2bin").removeAttribute("hidden");
 }
 
 function toogleToDarkMode() {
@@ -52,6 +69,10 @@ function toogleToDarkMode() {
 document
   .getElementById("btn-dec2bin")
   .addEventListener("click", toogleToDec2Bin);
+
+document
+  .getElementById("btn-bin2dec")
+  .addEventListener("click", toogleToBin2Dec);
 
 document
   .getElementById("cbDarkMode")

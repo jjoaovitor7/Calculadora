@@ -95,7 +95,9 @@ input[type="number"] {
   padding: 10px 0;
 }
 
-input[type="submit"], #btn-dec2bin {
+input[type="submit"],
+#btn-dec2bin,
+#btn-bin2dec {
   font-family: "Share Tech", sans-serif;
   margin-top: 25px;
   background: #4caf50;
@@ -108,7 +110,9 @@ input[type="submit"], #btn-dec2bin {
   border-radius: 5px;
   opacity: 0.8;
 }
-input[type="submit"]:hover, #btn-dec2bin:hover {
+input[type="submit"]:hover,
+#btn-dec2bin:hover,
+#btn-bin2dec {
   opacity: 1;
 }
 
