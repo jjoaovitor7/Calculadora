@@ -124,3 +124,19 @@ div.addEventListener("click", divClicked);
 equals.addEventListener("click", equalsClicked);
 clear.addEventListener("click", clearClicked);
 point.addEventListener("click", pointClicked);
+
+function bin2dec() {
+  if (display.textContent.length != 0) {
+    if (isNaN(parseInt(display.textContent, 2))) {
+      display.textContent = "#Error"
+    } else {
+      display.textContent = parseInt(display.textContent, 2);
+    }
+  }
+}
+
+function dec2bin() {
+  if (display.textContent.length != 0) {
+    display.textContent = parseInt(parseInt(display.textContent, 10).toString(2));
+  }
+}

@@ -1,11 +1,27 @@
-body {
+.text-center {
+  text-align: center;
+}
+
+#header__title {
+  border: 1px solid #0000ff;
+  font-family: "Share Tech", sans-serif;
+  font-size: 3.75rem;
+  animation: slidein 1.5s;
+  padding: 0 1rem;
+}
+
+#calc {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 22.5vh;
 }
 
-/* Display */
+#calc button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .display {
   display: flex;
   width: 400px;
@@ -21,9 +37,7 @@ body {
 .display p {
   float: right;
 }
-/***********/
 
-/* Container */
 .container {
   display: grid;
   grid-template-columns: 100px 100px 100px 100px;
@@ -46,9 +60,8 @@ body {
 .container button:hover {
   background: #000;
 }
-/*************/
 
-/* Media Queries */
+/* MEDIA QUERIES */
 @media screen and (max-width: 768px) {
   .display {
     width: 250px;
@@ -110,5 +123,31 @@ body {
   .container button#mult {
     grid-row: 5;
     grid-column: 2;
+  }
+}
+
+/* ANIMATIONS */
+@keyframes slidein {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@-moz-keyframes slidein {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@-webkit-keyframes slidein {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
   }
 }

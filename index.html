@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- METATAGS -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./public/css/style.css" />
+
+    <!-- SHARE TECH AND LOBSTER FONT -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" />
+
+    <!-- TITLE -->
+    <title>Calculadora</title>
+  </head>
+
+  <body>
+    <header style="display:flex; justify-content:center; align-items:center;">
+      <h1 id="header__title">Calculadora</h1>
+    </header>
+
+    <div id="calc">
+      <div class="display"></div>
+
+      <div class="container">
+        <button id="one">1</button>
+        <button id="two">2</button>
+        <button id="three">3</button>
+        <button id="div">/</button>
+        <button id="four">4</button>
+        <button id="five">5</button>
+        <button id="six">6</button>
+        <button id="mult">x</button>
+        <button id="seven">7</button>
+        <button id="eight">8</button>
+        <button id="nine">9</button>
+        <button id="subt">-</button>
+        <button id="zero">0</button>
+        <button id="point">.</button>
+        <button id="equals">=</button>
+        <button id="sum">+</button>
+        <button id="bin2dec" onclick="bin2dec()">BIN2DEC</button>
+        <button id="dec2bin" onclick="dec2bin()">DEC2BIN</button>
+        <button id="clear">C</button>
+      </div>
+    </div>
+
+    <script src="./public/scripts/main.js"></script>
+  </body>
+</html>
