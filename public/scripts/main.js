@@ -1,131 +1,51 @@
-// variables
-// numbers
-const one = document.getElementById("one");
-const two = document.getElementById("two");
-const three = document.getElementById("three");
-const four = document.getElementById("four");
-const five = document.getElementById("five");
-const six = document.getElementById("six");
-const seven = document.getElementById("seven");
-const eight = document.getElementById("eight");
-const nine = document.getElementById("nine");
-const zero = document.getElementById("zero");
-
-// operations
-const sum = document.getElementById("sum");
-const subt = document.getElementById("subt");
-const mult = document.getElementById("mult");
-const div = document.getElementById("div");
-const equals = document.getElementById("equals");
-
-// clear
+const numbers = document.querySelectorAll(".numbers");
+const operations = document.querySelectorAll(".operations");
+let display = document.querySelector(".display");
+const point = document.getElementById("point");
 const clear = document.getElementById("clear");
 
-// point, in decimal
-const point = document.getElementById("point");
-
-let display = document.querySelector(".display");
-//----------
-
-function oneClicked() {
-  display.textContent += 1;
+function clicked_number(e) {
+  display.textContent += parseInt(e.target.textContent);
 }
 
-function twoClicked() {
-  display.textContent += 2;
+function clicked_operations(e) {
+  display.textContent += e.target.textContent;
 }
 
-function threeClicked() {
-  display.textContent += 3;
-}
+numbers[0].addEventListener("click", clicked_number);
+numbers[1].addEventListener("click", clicked_number);
+numbers[2].addEventListener("click", clicked_number);
+numbers[3].addEventListener("click", clicked_number);
+numbers[4].addEventListener("click", clicked_number);
+numbers[5].addEventListener("click", clicked_number);
+numbers[6].addEventListener("click", clicked_number);
+numbers[7].addEventListener("click", clicked_number);
+numbers[8].addEventListener("click", clicked_number);
+numbers[9].addEventListener("click", clicked_number);
 
-function fourClicked() {
-  display.textContent += 4;
-}
+operations[0].addEventListener("click", clicked_operations);
+operations[1].addEventListener("click", clicked_operations);
+operations[2].addEventListener("click", clicked_operations);
 
-function fiveClicked() {
-  display.textContent += 5;
-}
 
-function sixClicked() {
-  display.textContent += 6;
-}
-
-function sevenClicked() {
-  display.textContent += 7;
-}
-
-function eightClicked() {
-  display.textContent += 8;
-}
-
-function nineClicked() {
-  display.textContent += 9;
-}
-
-function zeroClicked() {
-  display.textContent += 0;
-}
-
-function sumClicked() {
-  display.textContent += "+";
-}
-
-function subtClicked() {
-  display.textContent += "-";
-}
-
-function multClicked() {
-  display.textContent += "*";
-}
-
-function divClicked() {
-  display.textContent += "/";
-}
-
-function equalsClicked() {
+operations[3].addEventListener("click", () => {
   /**
    * for operations, the value of display.textContent is taken
    * and the operations in this are executed e soon after
    * are diplayed in display, if an error occurs,
    * values are "erased".
    */
-  try {
-    let aux = eval(display.textContent);
-    display.textContent = aux;
-  } catch (SyntaxError) {
-    display.textContent = "";
-  }
-}
+     try {
+      let aux = eval(display.textContent);
+      display.textContent = aux;
+    } catch (SyntaxError) {
+      display.textContent = "";
+    }
+});
 
-function clearClicked() {
-  display.textContent = "";
-}
+operations[4].addEventListener("click", clicked_operations);
 
-function pointClicked() {
-  display.textContent += ".";
-}
-
-one.addEventListener("click", oneClicked);
-two.addEventListener("click", twoClicked);
-three.addEventListener("click", threeClicked);
-four.addEventListener("click", fourClicked);
-five.addEventListener("click", fiveClicked);
-six.addEventListener("click", sixClicked);
-seven.addEventListener("click", sevenClicked);
-eight.addEventListener("click", eightClicked);
-nine.addEventListener("click", nineClicked);
-zero.addEventListener("click", zeroClicked);
-
-sum.addEventListener("click", sumClicked);
-subt.addEventListener("click", subtClicked);
-mult.addEventListener("click", multClicked);
-div.addEventListener("click", divClicked);
-equals.addEventListener("click", equalsClicked);
-clear.addEventListener("click", clearClicked);
-point.addEventListener("click", pointClicked);
-
-function bin2dec() {
+operations[5].addEventListener("click", () => {
   if (display.textContent.length != 0) {
     if (isNaN(parseInt(display.textContent, 2))) {
       display.textContent = "#Error"
@@ -133,10 +53,18 @@ function bin2dec() {
       display.textContent = parseInt(display.textContent, 2);
     }
   }
-}
+});
 
-function dec2bin() {
+operations[6].addEventListener("click", () => {
   if (display.textContent.length != 0) {
     display.textContent = parseInt(parseInt(display.textContent, 10).toString(2));
   }
-}
+})
+
+clear.addEventListener("click", () => {
+  display.textContent = "";
+});
+
+point.addEventListener("click", () => {
+  display.textContent += ".";
+});
