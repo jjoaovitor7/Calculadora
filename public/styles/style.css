@@ -1,17 +1,21 @@
-.text-center {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 #main-header {
+  margin-top: 15vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#header__title {
+#main-header__title {
   border: 1px solid #0000ff;
   font-family: "Share Tech", sans-serif;
   font-size: 3.75rem;
+  -webkit-animation: slidein 1.5s;
   animation: slidein 1.5s;
   padding: 0 1rem;
 }
@@ -28,49 +32,45 @@
   justify-content: center;
 }
 
-.display {
+#display {
   display: flex;
-  width: 400px;
+  width: 350px;
   height: 50px;
   background: #f2f2f2;
   border-radius: 5px;
   border: 1px solid #c2c2c2;
-  margin-bottom: 5px;
+  margin: 1rem 0;
   justify-content: flex-end;
   align-items: flex-end;
-}
-
-.display p {
   float: right;
 }
 
 .container {
   display: grid;
-  grid-template-columns: 100px 100px 100px 100px;
+  grid-template-columns: 90px 90px 90px 90px;
 }
 
 .container button {
-  /* display: inline; */
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #111;
-  border: none;
-  color: white;
+  color: #fff;
   padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
+  font-size: 1rem;
   cursor: pointer;
   border: 1.5px solid #0000ff;
 }
 
 .container button:hover {
   background: #000;
+  /* filter: brightness(0.5); */
 }
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 768px) {
-  .display {
-    width: 250px;
+  #display {
+    width: 20rem;
   }
 
   .container {
@@ -138,23 +138,23 @@
 @keyframes slidein {
   from {
     -webkit-transform: scaleX(0);
-            transform: scaleX(0);
+    transform: scaleX(0);
   }
 
   to {
     -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+    transform: scaleX(1);
   }
 }
 
 @-webkit-keyframes slidein {
   from {
     -webkit-transform: scaleX(0);
-            transform: scaleX(0);
+    transform: scaleX(0);
   }
 
   to {
     -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+    transform: scaleX(1);
   }
 }

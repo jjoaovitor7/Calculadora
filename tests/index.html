@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QUnit</title>
+  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.19.1.css" />
+</head>
+
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture">
+    <div>
+      <header id="main-header">
+        <h1 id="main-header__title">Calculadora</h1>
+      </header>
+
+      <div id="calc">
+        <div id="display"></div>
+
+        <div id="buttons" class="container">
+          <button id="one" class="numbers">1</button>
+          <button id="two" class="numbers">2</button>
+          <button id="three" class="numbers">3</button>
+          <button id="div" class="operations">/</button>
+          <button id="four" class="numbers">4</button>
+          <button id="five" class="numbers">5</button>
+          <button id="six" class="numbers">6</button>
+          <button id="mult" class="operations">*</button>
+          <button id="seven" class="numbers">7</button>
+          <button id="eight" class="numbers">8</button>
+          <button id="nine" class="numbers">9</button>
+          <button id="subt" class="operations">-</button>
+          <button id="zero" class="numbers">0</button>
+          <button id="point">.</button>
+          <button id="equals" class="operations">=</button>
+          <button id="sum" class="operations">+</button>
+          <button id="bin2dec" class="operations">BIN2DEC</button>
+          <button id="dec2bin" class="operations">DEC2BIN</button>
+          <button id="paren-open" class="operations">(</button>
+          <button id="paren-close" class="operations">)</button>
+          <button id="clear">C</button>
+        </div>
+      </div>
+    </div>
+    <script src="../public/scripts/main.js"></script>
+  </div>
+  <script src="https://code.jquery.com/qunit/qunit-2.19.1.js"></script>
+  <script src="./tests.js"></script>
+</body>
+</html>

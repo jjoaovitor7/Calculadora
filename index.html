@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <!-- METATAGS -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <!-- METATAGS -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="./public/css/style.css" />
+  <link rel="stylesheet" href="./public/styles/style.css" />
 
-    <!-- GOOGLE FONTS -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" />
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" />
 
-    <title>Calculadora</title>
-  </head>
+  <title>Calculadora</title>
+</head>
 
-  <body>
+<body>
+  <div>
     <header id="main-header">
-      <h1 id="header__title">Calculadora</h1>
+      <h1 id="main-header__title">Calculadora</h1>
     </header>
 
     <div id="calc">
-      <div class="display"></div>
+      <div id="display"></div>
 
       <div id="buttons" class="container">
         <button id="one" class="numbers">1</button>
@@ -41,10 +44,12 @@
         <button id="sum" class="operations">+</button>
         <button id="bin2dec" class="operations">BIN2DEC</button>
         <button id="dec2bin" class="operations">DEC2BIN</button>
+        <button id="paren-open" class="operations">(</button>
+        <button id="paren-close" class="operations">)</button>
         <button id="clear">C</button>
       </div>
     </div>
-
-    <script src="./public/scripts/main.js"></script>
-  </body>
+  </div>
+  <script src="./public/scripts/main.js"></script>
+</body>
 </html>
