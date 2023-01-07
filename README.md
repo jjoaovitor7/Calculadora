@@ -4,6 +4,6 @@
 [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/uses-js.svg)](https://forthebadge.com)
 
-Simples calculadora para realizar as 4 operações básicas (soma, subtração, multiplicação e divisão), conversão de binário para decimal, e de decimal para binário, e também com a possibilidade de limpar a tela, caso tenha errado algo.
+Simples calculadora.
 
 <img src="./screenshots/1.png"></img>

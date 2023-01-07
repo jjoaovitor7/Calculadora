@@ -9,18 +9,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+#main-header__title, #main-header__subtitle {
+  font-family: "Share Tech", sans-serif;
+  -webkit-animation: slidein 1.5s;
+  animation: slidein 1.5s;
+  text-align: center;
 }
 
 #main-header__title {
   border: 1px solid #0000ff;
-  font-family: "Share Tech", sans-serif;
   font-size: 3.75rem;
-  -webkit-animation: slidein 1.5s;
-  animation: slidein 1.5s;
   padding: 0 1rem;
 }
 
-#calc {
+#main-header__subtitle {
+  margin: 1rem 0;;
+  font-size: 1.5rem;
+}
+
+#calc, #calc-comp {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,6 +69,26 @@
 
 #digits button:hover {
   background: #000;
+}
+
+#calc-comp {
+  margin-top: 1.2rem;
+}
+
+#calc-comp input[type="number"] {
+  margin: .5rem 0;
+  border: 0;
+  border-bottom: 1px solid #000;
+  min-width: 55%;
+}
+
+#calc-comp input[type="number"]::placeholder {
+  text-align: end;
+}
+
+#calc-comp input[type="number"]:focus{
+  outline: 1px dashed #000;
+  outline-offset: .1rem;
 }
 
 /* ANIMATIONS */
