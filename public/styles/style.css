@@ -5,7 +5,7 @@
 }
 
 #main-header {
-  margin-top: 16vh;
+  margin-top: 13vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +26,7 @@
 }
 
 #main-header__subtitle {
-  margin: 1rem 0;;
+  margin-top: .5rem;
   font-size: 1.5rem;
 }
 
@@ -80,6 +80,7 @@
   border: 0;
   border-bottom: 1px solid #000;
   min-width: 55%;
+  padding: .3rem;
 }
 
 #calc-comp input[type="number"]::placeholder {
@@ -89,6 +90,20 @@
 #calc-comp input[type="number"]:focus{
   outline: 1px dashed #000;
   outline-offset: .1rem;
+}
+
+#calc-comp #clear {
+  appearance: none;
+  background: #fff;
+  border: 1px dashed #000;
+  cursor: pointer;
+  padding: .5rem;
+  margin: .5rem 0;
+}
+
+#calc-comp #clear:active {
+  position: relative;
+  top: 1px;
 }
 
 /* ANIMATIONS */

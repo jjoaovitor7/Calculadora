@@ -185,3 +185,9 @@ units[8].addEventListener("input", (e) => {
   const inch_calc = e.target.value * 63360;
   units[7].value = parseFloat(inch_calc.toFixed(15));
 });
+
+document.querySelector("#calc-comp #clear").addEventListener("click", (_) => {
+  units.forEach((el) => {
+    el.value = "";
+  });
+});
