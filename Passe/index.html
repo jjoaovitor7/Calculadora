@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="stylesheet" href="../public/styles/style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" />
+
+  <title>Calculadora - Passe</title>
+</head>
+
+<body>
+  <header id="main-header">
+    <h1 id="main-header__title">Calculadora</h1>
+    <h2 id="main-header__subtitle">Passe</h2>
+  </header>
+
+  <div id="calc-ticket">
+    <div class="container">
+      <label for="seg">
+        <input type="checkbox" name="seg" id="seg" />
+        Segunda
+      </label>
+      <label for="ter">
+        <input type="checkbox" name="ter" id="ter" />
+        Terça
+      </label>
+      <label for="qua">
+        <input type="checkbox" name="qua" id="qua" />
+        Quarta
+      </label>
+      <label for="qui">
+        <input type="checkbox" name="qui" id="qui" />
+        Quinta
+      </label>
+      <label for="sex">
+        <input type="checkbox" name="sex" id="sex" />
+        Sexta
+      </label>
+      <label for="sab">
+        <input type="checkbox" name="sab" id="sab" />
+        Sábado
+      </label>
+      <label for="dom">
+        <input type="checkbox" name="dom" id="dom" />
+        Domingo
+      </label>
+    </div>
+    <div class="input-group">
+      <input autofocus type="number" inputmode="decimal" min=0 step="0.01" name="money" id="money" placeholder="R$" />
+      <input type="number" inputmode="decimal" min=0 step="1" name="weeks" id="weeks" placeholder="Nº dias da semana" />
+    </div>
+  </div>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="./main.js"></script>
+</body>
+
+</html>
